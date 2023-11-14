@@ -1,0 +1,21 @@
+<%- include('./_header.ejs') %>
+<%- include('./_backbutton.ejs') %>
+
+<a href="/teachers/newResult"><button type="button" id="createResultButton" class="btnSuccess">Add</button></a>
+<table class="resultTable">
+    <tr>
+        <th>Roll No.</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Score</th>
+        <th>Actions</th>
+    </tr>
+    <% for(i of result) { %>
+        <tr>
+            <%- include('./_tableRows.ejs') %>
+        </tr>
+    <%}%>
+</table>
+<script src="/js/dateFormatTeachers.js"></script>
+
+<%- include('./_footer.ejs') %>
